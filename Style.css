@@ -1,0 +1,547 @@
+/* =========================
+   ESTILOS GENERALES
+========================= */
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #FDEDE8;
+    color: #5A3E36;
+    padding-bottom: 120px;
+}
+header{
+    background-image: url("fondocute.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 60px 30px;
+    text-align: center;
+    color: #5A3E36;
+
+    /* capa para que el texto se vea */
+    position: relative;
+}
+
+header::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(246, 193, 179, 0.75);
+    z-index: 0;
+}
+
+header *{
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+header{
+    background-color: #F6C1B3;
+    padding: 30px;
+    text-align: center;
+}
+
+/* =========================
+   MENÚ
+========================= */
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 12px;
+}
+
+nav a{
+    background-color: #FFF5F2;
+    color: #5A3E36;
+    padding: 12px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+nav a:hover{
+    background-color: #FADCD3;
+    transform: translateY(-5px) scale(1.1);
+}
+
+/* =========================
+   MARQUESINA
+========================= */
+.marquesina{
+    background-color: #F2A08A;
+    color: #5A3E36;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+/* =========================
+   MAIN
+========================= */
+main{
+    max-width: 1000px;
+    margin: 40px auto;
+    background-color: #FFF5F2;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+/* =========================
+   SEPARADOR
+========================= */
+.separador{
+    border: none;
+    border-top: 3px dashed #F2A08A;
+    margin: 70px 0;
+}
+
+/* =========================
+   TABLA MULTIMEDIA
+========================= */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+th, td{
+    border: 2px solid #F6C1B3;
+    padding: 15px;
+    text-align: center;
+}
+
+th{
+    background-color: #F2A08A;
+}
+
+tbody tr:nth-child(even){
+    background-color: #FDE0D8;
+}
+
+/* =========================
+   GALERÍA CON CUADROS
+========================= */
+.galeria-imagenes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 por fila */
+    gap: 25px;
+    padding: 15px;
+}
+
+/* cuadro de cada imagen */
+.galeria-imagenes img{
+    width: 100%;
+    max-width: 220px;
+    background-color: #FFF5F2;
+    padding: 12px;
+    border-radius: 18px;
+    border: 3px solid #F6C1B3;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* efecto bonito */
+.galeria-imagenes img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+}
+
+
+/* =========================
+   GALERÍA IMÁGENES
+========================= */
+.galeria-imagenes{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-items: center;
+}
+
+.galeria-imagenes img{
+    width: 200px;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.galeria-imagenes img:hover{
+    transform: scale(1.2);
+}
+
+/* =========================
+   VIDEOS
+========================= */
+.galeria-videos{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.galeria-videos video{
+    width: 220px;
+    border-radius: 15px;
+}
+
+/* =========================
+   FORMULARIO
+========================= */
+form{
+    background-color: #FDE0D8;
+    padding: 30px;
+    max-width: 450px;
+    border-radius: 20px;
+    margin: auto;
+}
+
+input{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: 1px solid #F6C1B3;
+}
+
+/* =========================
+   BOTONES
+========================= */
+button{
+    padding: 14px;
+    width: 100%;
+    background-color: #F2A08A;
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #F6C1B3;
+}
+
+/* =========================
+   JUEGOS
+========================= */
+.juego-palabra{
+    background-color: #FDE0D8;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 450px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.marquesina-vertical{
+    height: 80px;
+    overflow: hidden;
+    margin: 25px 0;
+    background-color: #FFF5F2;
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.marquesina-vertical span{
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    animation: subirBajar 0.3s linear infinite;
+}
+
+@keyframes subirBajar{
+    0%{transform: translateY(-100px);}
+    50%{transform: translateY(0);}
+    100%{transform: translateY(100px);}
+}
+
+#resultado{
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer{
+    background-color: #F6C1B3;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
+
+/* =========================
+   PORTADA ANIMADA
+========================= */
+#portada{
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(270deg, #F6C1B3, #FDEDE8, #F2A08A);
+    background-size: 400% 400%;
+    animation: fondoAnimado 10s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+@keyframes fondoAnimado{
+    0%{background-position: 0% 50%;}
+    50%{background-position: 100% 50%;}
+    100%{background-position: 0% 50%;}
+}
+
+.contenido-portada{
+    text-align: center;
+    animation: aparecer 1.5s ease;
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.titulo-portada{
+    font-size: 50px;
+}
+
+.subtitulo-portada{
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn-entrar{
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 30px;
+    background-color: #FFF5F2;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-entrar:hover{
+    transform: scale(1.1);
+    background-color: #FADCD3;
+}
+
+.juego-quiz{
+    background-color: #FFF5F2;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: 60px auto;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.juego-quiz button{
+    margin: 10px;
+}
+
+#btnReiniciar{
+    display: none;
+    margin-top: 20px;
+    background-color: #F6C1B3;
+}
+
+.reinicio-animado{
+    animation: rebote 0.6s ease;
+}
+
+@keyframes rebote{
+    0%{ transform: scale(0.8); opacity: 0; }
+    60%{ transform: scale(1.1); opacity: 1; }
+    100%{ transform: scale(1); }
+}
+
+/* CONTENIDO CENTRAL */
+.contenido{
+    max-width: 900px;          /* evita texto de extremo a extremo */
+    margin: 60px auto;         /* centra y da aire */
+    padding: 40px 50px;        /* separación interna */
+    background-color: #FFF5F2;
+    border-radius: 25px;
+    line-height: 1.8;          /* respiración del texto */
+}
+
+/* TÍTULOS */
+.contenido h2{
+    font-size: 32px;           /* letra más grande */
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* PÁRRAFOS */
+.contenido p{
+    font-size: 18px;           /* MÁS LEGIBLE */
+    margin-bottom: 25px;       /* espacio entre párrafos */
+    text-align: justify;
+}
+
+/* IMAGEN CENTRAL */
+.imagen-central{
+    display: block;
+    margin: 40px auto;
+    max-width: 70%;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   HOVER IMÁGENES HISTORIA
+========================= */
+.imagen-central{
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.imagen-central:hover{
+    transform: scale(1.05);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.25);
+}
+
+.contenido p{
+    transition: background-color 0.3s ease;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.contenido p:hover{
+    background-color: #FDE0D8;
+}
+
+/* =========================
+   EFECTO ESCRIBIENDO TÍTULO
+========================= */
+.titulo-typing{
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid #F2A08A;
+    font-size: 34px;
+    margin: auto;
+    animation: escribir 4s steps(40, end) forwards,
+               parpadeo 0.8s infinite;
+}
+
+@keyframes escribir{
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes parpadeo{
+    50%{
+        border-color: transparent;
+    }
+}
+
+/* =========================
+   DISEÑO RESPONSIVE
+========================= */
+
+/* TABLETS */
+@media (max-width: 900px){
+
+    header{
+        padding: 40px 20px;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 12px 0;
+    }
+
+    .contenido{
+        padding: 30px;
+        margin: 40px 20px;
+    }
+
+    .contenido h2{
+        font-size: 26px;
+    }
+
+    .contenido p{
+        font-size: 17px;
+    }
+
+    .imagen-central{
+        max-width: 90%;
+    }
+
+    table{
+        font-size: 14px;
+    }
+}
+
+/* CELULARES */
+@media (max-width: 600px){
+
+    header h1{
+        font-size: 22px;
+    }
+
+    nav a{
+        display: block;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .marquesina{
+        font-size: 14px;
+    }
+
+    .contenido{
+        padding: 25px 20px;
+        margin: 30px 15px;
+    }
+
+    .contenido h2{
+        font-size: 22px;
+    }
+
+    .contenido p{
+        font-size: 16px;
+    }
+
+    .imagen-central{
+        max-width: 100%;
+    }
+
+    .galeria-imagenes{
+        grid-template-columns: 1fr; /* una imagen por fila */
+    }
+
+    .galeria-videos video{
+        width: 100%;
+    }
+
+    .juego-quiz,
+    .juego-palabra{
+        width: 90%;
+        padding: 20px;
+    }
+
+    button{
+        font-size: 16px;
+    }
+}

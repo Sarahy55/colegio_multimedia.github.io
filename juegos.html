@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎮 Juegos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>💻✨ Bienvenido al Portal de Informática ✨💻</h1>
+
+    <nav>
+        <ul>
+              <li><a href="Archivo_Index.html">Inicio</a></li>
+        <li><a href="Galeria.html">Galeria Multimedia🎬</a></li>
+        <li><a href="Formulario.html">Formulario 📝</a></li>
+        <li><a href="juegos.html">Juegos🎮</a></li>
+        <li><a href="Historia.html">Historia 🏫</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<section id="juego-numero">
+    <h2>🎮 Juego: Adivina el número</h2>
+    <p>✨ Piensa un número del <strong>1 al 30</strong> ✨</p>
+
+    <input type="number" id="numero" min="1" max="30" placeholder="Escribe un número">
+    <button onclick="verificarNumero()">🎯 Adivinar</button>
+
+    <p id="resultadoNumero"></p>
+</section>
+
+
+<script>
+function verificarNumero(){
+    const numeroSecreto = 7; 
+    const respuesta = document.getElementById("numero").value;
+    const resultado = document.getElementById("resultadoNumero");
+
+    if(respuesta == numeroSecreto){
+        resultado.textContent = "🎉 ¡Correcto! Adivinaste el número";
+        resultado.style.color = "green";
+    } else {
+        resultado.textContent = "❌ Incorrecto, intenta otra vez";
+        resultado.style.color = "red";
+    }
+}
+
+function verificarPalabra(){
+    const palabra = "MULTIMEDIA";
+    const respuesta = document.getElementById("respuesta").value.toUpperCase();
+    const resultado = document.getElementById("resultado");
+
+    if(respuesta === palabra){
+        resultado.textContent = "🎉 ¡Correcto! Adivinaste la palabra";
+        resultado.style.color = "green";
+    } else {
+        resultado.textContent = "❌ Incorrecto, intenta otra vez";
+        resultado.style.color = "red";
+    }
+}
+</script>
+
+
+
+
+</main>
+
+
+<section class="juego-palabra">
+    <h2>🎯 Juego: Adivina la palabra</h2>
+
+    <div class="marquesina-vertical">
+        <span id="palabraSecreta">MULTIMEDIA</span>
+    </div>
+
+    <p>✍️ Escribe la palabra que ves en movimiento:</p>
+
+    <input type="text" id="respuesta" placeholder="Escribe aquí">
+    <button onclick="verificar()">Comprobar</button>
+
+    <p id="resultado"></p>
+</section>
+
+<script>
+function verificar(){
+    const palabra = "MULTIMEDIA";
+    const respuesta = document.getElementById("respuesta").value.toUpperCase();
+    const resultado = document.getElementById("resultado");
+
+    if(respuesta === palabra){
+        resultado.textContent = "🎉 ¡Correcto! Adivinaste la palabra";
+        resultado.style.color = "green";
+    } else {
+        resultado.textContent = "❌ Incorrecto, intenta otra vez";
+        resultado.style.color = "red";
+    }
+}
+</script>
+
+<p>
+<center><iframe src="https://es.educaplay.com/tipos-de-actividades/memory.html" allowtransparency="true" width="600" height="600" frameborder="0" scrolling="no" allowfullscreen></iframe></center>
+</p>
+
+<section class="juego-quiz" id="quiz">
+    <h2>🧠 Quiz de Informática</h2>
+
+    <p id="pregunta"></p>
+
+    <div class="opciones">
+        <button onclick="verificarQuiz(0)"></button>
+        <button onclick="verificarQuiz(1)"></button>
+        <button onclick="verificarQuiz(2)"></button>
+    </div>
+
+    <p id="resultadoQuiz"></p>
+
+    <button id="btnReiniciar" onclick="reiniciarQuiz()">🔄 Volver a jugar</button>
+</section>
+
+
+<script>
+const preguntas = [
+    {
+        pregunta: "¿Qué significa HTML?",
+        opciones: ["Lenguaje de marcas", "Sistema operativo", "Editor de texto"],
+        correcta: 0
+    },
+    {
+        pregunta: "¿Para qué sirve CSS?",
+        opciones: ["Crear bases de datos", "Dar estilo a una página web", "Editar videos"],
+        correcta: 1
+    },
+    {
+        pregunta: "¿Qué lenguaje da interactividad?",
+        opciones: ["HTML", "CSS", "JavaScript"],
+        correcta: 2
+    },
+    {
+        pregunta: "¿Qué es un navegador?",
+        opciones: ["Un programa para ver páginas web", "Un antivirus", "Un editor"],
+        correcta: 0
+    }
+];
+
+let indice = 0;
+
+function cargarPregunta(){
+    const p = preguntas[indice];
+    document.getElementById("pregunta").textContent = p.pregunta;
+
+    const botones = document.querySelectorAll(".opciones button");
+    botones.forEach((btn, i) => {
+        btn.textContent = p.opciones[i];
+        btn.style.display = "inline-block";
+    });
+
+    document.getElementById("resultadoQuiz").textContent = "";
+}
+
+function verificarQuiz(opcion){
+    const resultado = document.getElementById("resultadoQuiz");
+
+    if(opcion === preguntas[indice].correcta){
+        resultado.textContent = "✅ Correcto";
+        resultado.style.color = "green";
+    }else{
+        resultado.textContent = "❌ Incorrecto";
+        resultado.style.color = "red";
+    }
+
+    indice++;
+
+    setTimeout(() => {
+        if(indice < preguntas.length){
+            cargarPregunta();
+        }else{
+            finalizarQuiz();
+        }
+    }, 800);
+}
+
+function finalizarQuiz(){
+    document.getElementById("pregunta").textContent = "🎉 ¡Terminaste el quiz!";
+    document.querySelector(".opciones").style.display = "none";
+    document.getElementById("btnReiniciar").style.display = "block";
+}
+
+function reiniciarQuiz(){
+    indice = 0;
+    document.querySelector(".opciones").style.display = "block";
+    document.getElementById("btnReiniciar").style.display = "none";
+
+    const quiz = document.getElementById("quiz");
+    quiz.classList.remove("reinicio-animado");
+    void quiz.offsetWidth;
+    quiz.classList.add("reinicio-animado");
+
+    cargarPregunta();
+}
+
+// iniciar
+cargarPregunta();
+</script>
+
+
+
+<footer>
+    <p>💖 © 2026 - Bachillerato Técnico en Informática | Diseño Web 💖</p>
+</footer>
+
+</body>
+</html>
+
+

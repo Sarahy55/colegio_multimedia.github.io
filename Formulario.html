@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📝 Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+            
+            @keyframes typing {
+                from { width: 0; }
+                to   { width: 100%; }
+            }
+            @keyframes blink-caret {
+                50% { border-color: transparent; }
+            }
+            .typing {
+                overflow: hidden;
+                white-space: nowrap;
+                border-right: 3px solid #4CAF50;
+                width: 0;
+                animation:
+                    typing 4s steps(40, end) forwards,
+                    blink-caret 0.7s step-end infinite;
+            }
+        </style>
+
+<body>
+
+<header>
+    <h1 class="typing">💻✨ Bienvenido al Portal de Informática ✨💻</h1>
+
+    <nav>
+        <ul>
+             <li><a href="Archivo_Index.html">Inicio</a></li>
+        <li><a href="Galeria.html">Galeria Multimedia🎬</a></li>
+        <li><a href="Formulario.html">Formulario 📝</a></li>
+        <li><a href="juegos.html">Juegos🎮</a></li>
+        <li><a href="Historia.html">Historia 🏫</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<marquee class="marquesina">
+✨ Registro Multimedia ✨
+</marquee>
+
+<main>
+<center>
+<section id="formulario">
+    <h2>📝 Registro Multimedia</h2>
+
+    <!-- FORMULARIO QUE SÍ ENVÍA -->
+    <form action="gracias.html" method="post">
+
+        <label>🙋 Nombre:</label>
+        <input type="text" name="nombre" required>
+
+        <label>📧 Correo electrónico:</label>
+        <input type="email" name="correo" required>
+
+        <label>🖼️ ¿Qué es una imagen digital?</label>
+        <input type="text">
+
+        <label>📷 Formato común de imágenes:</label>
+        <input type="text">
+
+        <label>🎥 ¿Para qué sirve un video?</label>
+        <input type="text">
+
+        <label>🎧 ¿Qué es un archivo de audio?</label>
+        <input type="text">
+
+        <label>🎵 Formato común de audio:</label>
+        <input type="text">
+
+        <label>🖌️ Programa para editar imágenes:</label>
+        <input type="text">
+
+        <button type="submit">💾 Enviar</button>
+    </form>
+</section>
+</center>
+</main>
+
+<footer>
+    <p>💖 © 2026 - Bachillerato Técnico en Informática | Diseño Web 💖</p>
+</footer>
+
+</body>
+</html>

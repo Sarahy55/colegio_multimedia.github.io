@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 Portal de Informática 🌸</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<style>
+        
+        @keyframes aparecer { 
+            from { 
+                opacity: 0; /* Inicia con opacidad 0, es decir, invisible */
+                transform: translateY(20px); /* Inicia 20 píxeles abajo del lugar original */
+            }
+            to { 
+                opacity: 1; /* Termina completamente visible */
+                transform: translateY(0); /* Termina en su posición original */
+            }
+        }
+
+        h2, p, img { 
+            animation: aparecer 1s ease-in-out; /* Aplica la animación 'aparecer' a h2, p e img con una duración de 1 segundo y una transición suave */
+        }
+
+
+        body{
+    padding-bottom: 100px;
+}
+
+    </style>
+
+<body>
+
+    <!-- PORTADA -->
+<div id="portada">
+    <div class="contenido-portada">
+        <h1 class="titulo-portada">💻 Portal de Informática 💻</h1>
+        <p class="subtitulo-portada">Creatividad • Multimedia • Tecnología</p>
+        <button class="btn-entrar" onclick="entrar()">✨ Entrar al Portal ✨</button>
+    </div>
+</div>
+
+<div class="flash" id="flash"></div>
+
+
+<header>
+    <h1>💻✨ Bienvenido al Portal de Informática ✨💻</h1>
+
+    <img src="Logo.PNG" alt="Imagen 1" class="imagen-uno" /> 
+
+    <nav>
+        <ul>
+           <nav>
+    <ul>
+        <li><a href="Archivo_Index.html">Inicio</a></li>
+        <li><a href="Galeria.html">Galeria Multimedia🎬</a></li>
+        <li><a href="Formulario.html">Formulario 📝</a></li>
+        <li><a href="juegos.html">Juegos🎮</a></li>
+        <li><a href="Historia.html">Historia 🏫</a></li>
+    </ul>
+</nav>
+
+        </ul>
+    </nav>
+</header>
+
+<marquee class="marquesina">
+✨ Multimedia • Diseño Web • Informática • Creatividad Digital ✨
+</marquee>
+
+
+
+<div class="contenido">
+
+    <h2>Introducción a la Multimedia Básica</h2>
+
+    <p>
+        La multimedia básica es el conjunto de elementos digitales 
+        como imágenes, videos, audios y texto que se utilizan para comunicar 
+        información de forma más atractiva e interactiva. Estos recursos 
+        permiten mejorar el aprendizaje, facilitar la comprensión de contenidos 
+        y captar la atención del usuario.
+    </p>
+
+    <p>
+        En el área de la informática, la multimedia es fundamental, ya que se 
+        aplica en páginas web, presentaciones, videos educativos y plataformas 
+        digitales, combinando creatividad y tecnología. Gracias a la multimedia, 
+        la información se vuelve más dinámica, visual y fácil de entender.
+    </p>
+
+    <img src="Lic_Navidad.png" class="imagen-central">
+
+    <p>
+        Como podemos ver, esta imagen fue editada específicamente por mí.
+        Ahora vamos a ver más imágenes editadas en diferentes aplicaciones y 
+        programas en la página 
+        <a href="Galeria.html"><b>Galería Multimedia 🎬</b></a>.
+    </p>
+
+</div>
+
+
+
+
+<footer>
+    <p>💖 © 2026 - Bachillerato Técnico en Informática | Diseño Web 💖</p>
+</footer>
+
+<script>
+function entrar(){
+    const portada = document.getElementById("portada");
+    const flash = document.getElementById("flash");
+
+    flash.classList.add("flash-activo");
+    portada.classList.add("portada-salida");
+
+    setTimeout(() => {
+        portada.style.display = "none";
+    }, 900);
+}
+</script>
+
+
+
+</body>
+
+</html>
+
